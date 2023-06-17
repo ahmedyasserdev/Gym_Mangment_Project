@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Gym Name</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body class="">
+    <button class="mood mood-btn " type="button"><span></span></button>
+    <section>
+        <h1>Your Gym <i class="fa-solid fa-dumbbell"></i> Name </h1>
+
+        <div class="container">
+            <div class="expired">
+                <h2>Expired Memberships:</h2>
+                <ul class="expired-list"></ul>
+            </div>
+            <div class="inputs">
+                <input type="text" placeholder="Name" id="name">
+                <div class="category">
+                    <span class="category-option normal" data-price="100">Normal</span>
+                    <span class="category-option super" data-price="200">Super</span>
+                </div>
+                <input type="text" placeholder="Code" id="code">
+                <button class="create">Add Client</button>
+            </div>
+
+            <div class="search-container">
+                <input onkeyup="searchData(this.value)" id="search" type="text" placeholder="Search">
+                <div class="btn-search">
+                    <button onclick="getSearchMood(this.id)" id="searchName">Search By Name</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCode">Search By Code</button>
+                </div>
+            </div>
+            <div class="outputs">
+                <table class="table">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Code</th>
+                        <th>Category</th>
+                        <th>Membership Start Date</th>
+                        <th>Membership End Date</th>
+                        <th >Price</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                    <tbody class="tbody">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
